@@ -1,0 +1,13 @@
+# Don't track content of these folders
+Output/
+TrainedModels/
+__pycache__/
+.idea
+
+Checkpoints/
+datas/
+Input/
+models/
+plot/
+Results/
+Transfer/

@@ -9,7 +9,7 @@ from utils.imresize import imresize_to_shape
 if __name__ == '__main__':
     parser = get_arguments()
     parser.add_argument('--model_name', help='load model name', required=True) # moving-gif_00058_paint
-    parser.add_argument('--model_param', help= 'load model param', default='scale_factor=0.750, noise_amp=0.1000, lambda_cyc=1.000, lambda_idt=1.000')
+    parser.add_argument('--model_param', help= 'load model param', default='scale_factor=0.750,min_size=100,niter=4000,lambda_cyc=1.000,lambda_idt=1.000')
     parser.add_argument('--input_dir', help='input image dir', required=True) 
     parser.add_argument('--input_name', help='input image name', required=True)
     parser.add_argument('--mode', help='task to be done', default='transfer')

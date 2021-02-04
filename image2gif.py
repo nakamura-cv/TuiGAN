@@ -11,9 +11,13 @@ if __name__ == '__main__':
 
     img_dir = '%s/%s' % (opt.input_dir, opt.input_name)
     images = []
+    n = 0
     for subdir, dirs, files in os.walk(img_dir):
-       for file in files:
+       for file in sorted(files):
            file_path = os.path.join(subdir, file)
            if file_path.endswith(".png"):
-               images.append(imageio.imread(file_path))
-    imageio.mimsave('movie/%s.gif' % opt.input_name, images, fps=opt.fps)
+               if(n<10):
+                    images.append(imageio.imread(file_path))
+                    print(file_path)
+                    n += 1
+    imageio.mimsave('Transfer/gif/%s.gif' % opt.input_name, images, fps=opt.fps)

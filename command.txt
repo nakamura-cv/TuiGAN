@@ -1,0 +1,13 @@
+python train.py --input_name <input_name> --root <datas/task_name>
+python train.py --input_name apple --root datas/apple
+python train.py --input_name moving-gif_00058,moving-gif_00058 --root datas/moving-gif_00058,moving-gif_00058
+python train.py --input_name moving-gif_00058,moving-gif_00058_label_parts --root datas/moving-gif_00058,moving-gif_00058_label_parts
+
+
+python transfer.py --model_name moving-gif_00130_superpixel_all,moving-gif_00130_superpixel_label_parts --model_param scale_factor=0.750,min_size=100,niter=4000,lambda_cyc=1.000,lambda_idt=1.000_210123 --input_dir Input/moving-gif_00130 --input_name moving-gif_00130_0.png
+python transfer.py --model_name moving-gif_00130_all,moving-gif_00130_label_parts_2 --model_param scale_factor=0.750,min_size=100,niter=4000,lambda_cyc=1.000,lambda_idt=1.000_210123 --input_dir Input/moving-gif_00130 --input_name moving-gif_00130_0.png
+python transfer.py --model_name moving-gif_00017,moving-gif_00017 --input_dir Input/moving-gif_00017 --input_name moving-gif_00017_0.png
+
+CUDA_VISIBLE_DEVICES=0
+CUDA_VISIBLE_DEVICES=1
+
